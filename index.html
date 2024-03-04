@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Library</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.7.3/css/uikit.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      /* Add custom styles here */
+    </style>
+  </head>
+  <body>
+    <!-- Code Stitch hero -->
+    <section id="hero-229">
+      <div class="cs-container">
+        <div class="cs-flex-group">
+          <span class="cs-topper">Expand your mind</span>
+          <h1 class="cs-title">Explore the World of Books</h1>
+          <p class="cs-text">
+            My own personalised book library. Read more more pages, learning
+            about the mind body and spirit.
+          </p>
+          <a href="#libary-container" class="cs-button-solid"
+            >Explore Library</a
+          >
+          <button
+            href=""
+            class="cs-button-transparent"
+            uk-toggle="target: #modal-add-book"
+          >
+            <span>📚</span>Add Book
+          </button>
+        </div>
+      </div>
+
+      <!-- Background Image -->
+      <picture class="cs-picture">
+        <source
+          media="(max-width: 600px)"
+          srcset="
+            https://csimg.nyc3.digitaloceanspaces.com/Hero/Background-m.jpg
+          "
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/Hero/Background.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Hero/Background.jpg"
+          alt="mountains"
+          width="2250"
+          height="700"
+          aria-hidden="true"
+        />
+      </picture>
+    </section>
+
+    <!-- End of code stitch -->
+    <div class="uk-container uk-margin-top">
+      <!-- Button to open dialog for adding new book -->
+      <!-- <button
+        class="uk-button uk-button-primary"
+        uk-toggle="target: #modal-add-book"
+      >
+        Add Book
+      </button> -->
+
+      <!-- Dialog box for adding new book -->
+      <div id="modal-add-book" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body" id="form-container">
+          <h2 class="uk-modal-title">Add New Book</h2>
+          <form id="submit-book">
+            <div class="uk-margin">
+              <input
+                id="title"
+                class="uk-input"
+                type="text"
+                required
+                placeholder="Title"
+              />
+            </div>
+            <div class="uk-margin">
+              <input
+                class="uk-input"
+                id="author"
+                type="text"
+                required
+                placeholder="Author"
+              />
+            </div>
+            <div class="uk-margin">
+              <label class="uk-form-label custom-text-color">Status</label>
+              <div class="uk-form-controls">
+                <label
+                  ><input
+                    class="uk-checkbox"
+                    id="read"
+                    type="checkbox"
+                    name="status"
+                  />
+                  Read</label
+                >
+              </div>
+            </div>
+            <div class="uk-margin">
+              <label class="uk-form-label custom-text-color" for="pages"
+                >Number of Pages</label
+              >
+              <div class="uk-form-controls">
+                <input
+                  class="uk-input"
+                  type="number"
+                  id="pages"
+                  name="pages"
+                  required
+                />
+              </div>
+            </div>
+            <div class="uk-margin">
+              <button
+                class="uk-button uk-button-default uk-modal-close"
+                type="button"
+              >
+                Cancel
+              </button>
+              <button
+                class="uk-button uk-button-primary"
+                id="submit"
+                type="submit"
+              >
+                Add
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Book cards -->
+      <div class="uk-container container">
+        <div class="uk-container" id="libary-container">
+          <a
+            href=""
+            class="uk-icon-button .uk-background-secondary"
+            uk-toggle="target: #modal-add-book"
+            uk-icon="icon: plus-circle"
+          ></a>
+        </div>
+        <div
+          class="uk-child-width-1-3@m uk-grid-small uk-grid-match library"
+          uk-grid
+        >
+          <!-- Sample book card (replace with dynamic content) -->
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.7.3/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.7.3/js/uikit-icons.min.js"></script>
+    <!-- Add your custom JavaScript here -->
+    <script src="./script.js" />
+  </body>
+</html>
